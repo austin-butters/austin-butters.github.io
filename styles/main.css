@@ -28,6 +28,13 @@
   /* To add: border, radius, opacity, shadow variables, etc*/
 }
 
+/* This fixes the browser adding a white border of padding or margin by default */
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
 h1 {
   font-family: var(--font-family-headings, sans-serif);
   font-size: var(--font-size-h1, 2.125rem);
@@ -50,4 +57,16 @@ p {
   font-family: var(--font-family-content, sans-serif);
   font-size: var(--font-size-p, 1rem);
   color: var(--black, black);
+}
+
+#website-header {
+  width: 100%;
+  height: 25%;
+  background-color: var(--red-primary, red);
+}
+
+#nav-bar {
+  width: 100%;
+  height: 8%;
+  background-color: var(--red-secondary, red);
 }
