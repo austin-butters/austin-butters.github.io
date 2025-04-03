@@ -11,9 +11,9 @@
   /* These are all of the main colors used for styling the website. Text will use the --black and --dark-primary colors. */
 
   /* Fonts */
-  --font-headings: helvetica, sans-serif;
-  --font-content: helvetica, sans-serif;
-  --font-links: helvetica, sans-serif;
+  --font-family-headings: helvetica, sans-serif;
+  --font-family-content: helvetica, sans-serif;
+  --font-family-links: helvetica, sans-serif;
   /* Fonts used on the website, defined for different types of text */
 
   /* Font Sizes */
@@ -26,4 +26,8 @@
   /* To add: spacing variables */
   /* To add: media query variables, e.g. breakpoints */
   /* To add: border, radius, opacity, shadow variables, etc*/
+}
+
+h1 {
+  font-family: var('--font-family-h1', sans-serif);
 }
