@@ -22,4 +22,8 @@
   --font-size-h3: 1rem;
   --font-size-p: 1rem;
   /* Font sizes for different text elements */
+
+  /* To add: spacing variables */
+  /* To add: media query variables, e.g. breakpoints */
+  /* To add: border, radius, opacity, shadow variables, etc*/
 }
