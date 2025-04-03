@@ -30,7 +30,11 @@
 
 /* This fixes the browser adding a white border of padding or margin by default */
 html,
-body {
+body,
+header,
+nav,
+main,
+footer {
   margin: 0px;
   padding: 0px;
 }
