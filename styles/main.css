@@ -76,6 +76,9 @@ p {
 }
 
 /* Header Styles */
+nav {
+  margin-bottom: 3rem; /* The media query below for mobile devices changes this for mobile */
+}
 .header {
   background-color: var(--red-primary, red);
 }
@@ -116,6 +119,7 @@ h2.header-banner-text {
   color: var(--white, white);
   width: 100%;
   text-align: center;
+  margin: 1rem;
 }
 
 /* Footer Styles */
@@ -146,10 +150,13 @@ p.footer {
 
 /* For mobile devices */
 @media (max-width: 768px) {
+  nav {
+    margin-bottom: 10rem; /* This is important, as the mobile version of the navigation bar takes up more space and would cover the top of the page's content. This change adds more space to the margin that pushes the content further down to avoid overlap. */
+  }
   .header-navbar {
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
+    justify-content: flex-start;
     width: 100%;
     height: 3rem;
     background-color: var(--red-secondary);
