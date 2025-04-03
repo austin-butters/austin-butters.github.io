@@ -8,8 +8,11 @@
   --light-secondary: #e5d0ac;
   --dark-primary: #333333;
   --blue-primary: #028391;
+  /* These are all of the main colors used for styling the website. Text will use the --black and --dark-primary colors. */
 
-  /*
-  These are all of the main colors used for styling the website. Text will use the --black and --dark-primary colors.
-  */
+  /* Fonts */
+  --font-headings: helvetica, sans-serif;
+  --font-content: helvetica, sans-serif;
+  --font-links: helvetica, sans-serif;
+  /* Fonts used on the website, defined for different types of text */
 }
