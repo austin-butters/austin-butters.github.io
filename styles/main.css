@@ -1,0 +1,15 @@
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --red-primary: #a31d1d;
+  --red-secondary: #6d2323;
+  --light-primary: #fef9e1;
+  --light-secondary: #e5d0ac;
+  --dark-primary: #333333;
+  --blue-primary: #028391;
+
+  /*
+  These are all of the main colors used for styling the website. Text will use the --black and --dark-primary colors.
+  */
+}
