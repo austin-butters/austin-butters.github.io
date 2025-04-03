@@ -1,8 +1,10 @@
 :root {
-  /* Removes default padding and margins */
+  /* REMOVE DEFAULT STYLES */
+  /* Removes the browser's default padding and margins */
   margin: 0px;
   padding: 0px;
 
+  /* DEFINING VARIABLES */
   /* Colors */
   --white: #ffffff;
   --black: #000000;
@@ -32,8 +34,7 @@
   /* To add: border, radius, opacity, shadow variables, etc*/
 }
 
-/*ELEMENTS*/
-
+/* BASIC ELEMENT STYLING - The website's default's if not otherwise defined by classes and IDs */
 /* This fixes the browser adding a white border of padding or margin by default */
 html,
 body,
@@ -68,7 +69,6 @@ p {
 }
 
 /*CLASSES*/
-
 /* Site wide classes. General rules I want to apply to objects across the sight. */
 .shadow-object {
   /* casts a shadow from an element */
@@ -147,7 +147,6 @@ p.footer {
 }
 
 /* MEDIA QUERIES */
-
 /* For mobile devices */
 @media (max-width: 768px) {
   nav {
