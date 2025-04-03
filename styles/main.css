@@ -17,9 +17,9 @@
   /* Fonts used on the website, defined for different types of text */
 
   /* Font Sizes */
-  --font-size-h1: 1rem;
-  --font-size-h2: 1rem;
-  --font-size-h3: 1rem;
+  --font-size-h1: 2.125rem;
+  --font-size-h2: 1.875rem;
+  --font-size-h3: 1.5rem;
   --font-size-p: 1rem;
   /* Font sizes for different text elements */
 
@@ -30,4 +30,24 @@
 
 h1 {
   font-family: var(--font-family-headings, sans-serif);
+  font-size: var(--font-size-h1, 2.125rem);
+  color: var(--red-primary, black);
+}
+
+h2 {
+  font-family: var(--font-family-headings, sans-serif);
+  font-size: var(--font-size-h1, 1.875em);
+  color: var(--red-primary, black);
+}
+
+h3 {
+  font-family: var(--font-family-headings, sans-serif);
+  font-size: var(--font-size-h1, 1.5rem);
+  color: var(--red-primary, black);
+}
+
+p {
+  font-family: var(--font-family-content, sans-serif);
+  font-size: var(--font-size-p, 1rem);
+  color: var(--black, black);
 }
