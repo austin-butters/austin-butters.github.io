@@ -15,4 +15,11 @@
   --font-content: helvetica, sans-serif;
   --font-links: helvetica, sans-serif;
   /* Fonts used on the website, defined for different types of text */
+
+  /* Font Sizes */
+  --font-size-h1: 1rem;
+  --font-size-h2: 1rem;
+  --font-size-h3: 1rem;
+  --font-size-p: 1rem;
+  /* Font sizes for different text elements */
 }
