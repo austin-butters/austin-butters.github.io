@@ -47,7 +47,10 @@ footer {
 }
 
 body {
-  background-color: var(--light-primary, white);
+  background-color: var(
+    --light-primary,
+    white
+  ); /* Set's the site's background color, which is overwrited by elements ontop, which are styled further down in this document */
 }
 
 /* Basic text styling */
@@ -74,7 +77,6 @@ p {
 
 /* Layout Styling - Basic layout styling for the main content of the page. */
 main {
-  background-color: var(--light-primary, white);
   margin: 50px; /*This wil be removed in a media query (below) for mobile, as mobile devices are narrower. */
 }
 
