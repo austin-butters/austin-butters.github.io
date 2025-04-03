@@ -102,8 +102,6 @@ nav {
 .header {
   background-color: var(--red-primary, red);
 }
-.header-banner {
-}
 .header-banner-text {
   text-align: center;
   color: var(--white, white);
