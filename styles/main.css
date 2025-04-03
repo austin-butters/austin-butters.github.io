@@ -1,0 +1,29 @@
+:root {
+  /* Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --red-primary: #a31d1d;
+  --red-secondary: #6d2323;
+  --light-primary: #fef9e1;
+  --light-secondary: #e5d0ac;
+  --dark-primary: #333333;
+  --blue-primary: #028391;
+  /* These are all of the main colors used for styling the website. Text will use the --black and --dark-primary colors. */
+
+  /* Fonts */
+  --font-headings: helvetica, sans-serif;
+  --font-content: helvetica, sans-serif;
+  --font-links: helvetica, sans-serif;
+  /* Fonts used on the website, defined for different types of text */
+
+  /* Font Sizes */
+  --font-size-h1: 1rem;
+  --font-size-h2: 1rem;
+  --font-size-h3: 1rem;
+  --font-size-p: 1rem;
+  /* Font sizes for different text elements */
+
+  /* To add: spacing variables */
+  /* To add: media query variables, e.g. breakpoints */
+  /* To add: border, radius, opacity, shadow variables, etc*/
+}
