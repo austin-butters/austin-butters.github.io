@@ -75,7 +75,7 @@ p {
   box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Header Classes */
+/* Header Styles */
 .header {
   background-color: var(--red-primary, red);
 }
@@ -98,6 +98,7 @@ h2.header-banner-text {
 }
 .header-navbar {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   width: 100%;
   height: 3rem;
@@ -115,4 +116,45 @@ h2.header-banner-text {
   color: var(--white, white);
   width: 100%;
   text-align: center;
+}
+
+/* Footer Styles */
+footer {
+  box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100px;
+}
+div.footer {
+  background-color: var(--dark-primary, gray);
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+h1.footer,
+h2.footer,
+h3.footer,
+p.footer {
+  font-family: var(--font-family-content, sans-serif);
+  color: var(--white, white);
+}
+
+/* MEDIA QUERIES */
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .header-navbar {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    width: 100%;
+    height: 3rem;
+    background-color: var(--red-secondary);
+  }
+  .header-navbar-pagelink {
+    box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.3);
+  }
 }
