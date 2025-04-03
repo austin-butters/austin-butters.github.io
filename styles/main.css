@@ -1,8 +1,12 @@
 :root {
-  /* Removes default padding and margins */
+  /*NEED TO ADD REDUNDANCIES TO EVERYTHING WITH VARIABLES*/
+
+  /* REMOVE DEFAULT STYLES */
+  /* Removes the browser's default padding and margins */
   margin: 0px;
   padding: 0px;
 
+  /* DEFINING VARIABLES */
   /* Colors */
   --white: #ffffff;
   --black: #000000;
@@ -21,19 +25,21 @@
   /* Fonts used on the website, defined for different types of text */
 
   /* Font Sizes */
-  --font-size-h1: 2.125rem;
-  --font-size-h2: 1.875rem;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 1.75rem;
   --font-size-h3: 1.5rem;
-  --font-size-p: 1rem;
+  --font-size-p: 1.15rem;
   /* Font sizes for different text elements */
+
+  /* Layout variables */
+  --footer-height: 100px;
 
   /* To add: spacing variables */
   /* To add: media query variables, e.g. breakpoints */
   /* To add: border, radius, opacity, shadow variables, etc*/
 }
 
-/*ELEMENTS*/
-
+/* BASIC ELEMENT STYLING - The website's default's if not otherwise defined by classes, IDs and media queries */
 /* This fixes the browser adding a white border of padding or margin by default */
 html,
 body,
@@ -45,6 +51,13 @@ footer {
   padding: 0px;
 }
 
+body {
+  background-color: var(
+    --light-primary,
+    white
+  ); /* Set's the site's background color, which is overwrited by elements ontop, which are styled further down in this document */
+}
+
 /* Basic text styling */
 h1 {
   font-family: var(--font-family-headings, sans-serif);
@@ -53,12 +66,12 @@ h1 {
 }
 h2 {
   font-family: var(--font-family-headings, sans-serif);
-  font-size: var(--font-size-h1, 1.875em);
+  font-size: var(--font-size-h2, 1.875em);
   color: var(--red-secondary, black);
 }
 h3 {
   font-family: var(--font-family-headings, sans-serif);
-  font-size: var(--font-size-h1, 1.5rem);
+  font-size: var(--font-size-h3, 1.5rem);
   color: var(--red-secondary, black);
 }
 p {
@@ -67,15 +80,25 @@ p {
   color: var(--black, black);
 }
 
-/*CLASSES*/
+/* Layout Styling - Basic layout styling for the main content of the page. */
+main {
+  margin-left: 20vh; /* This wil be removed in a media query (below) for mobile, as mobile devices are narrower. */
+  margin-right: 20vh;
+  padding-top: 2rem;
+  min-height: calc(100vh - var(--footer-height, 100px));
+}
 
+/*CLASSES*/
 /* Site wide classes. General rules I want to apply to objects across the sight. */
 .shadow-object {
   /* casts a shadow from an element */
   box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Header Classes */
+/* Header Styles */
+nav {
+  margin-bottom: 3rem; /* The media query below for mobile devices changes this for mobile */
+}
 .header {
   background-color: var(--red-primary, red);
 }
@@ -88,8 +111,6 @@ p {
   padding-bottom: 15px;
   margin: 0px;
 }
-h1.header-banner-text {
-}
 h2.header-banner-text {
   font-size: 1rem;
   padding-top: 0px;
@@ -98,6 +119,7 @@ h2.header-banner-text {
 }
 .header-navbar {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   width: 100%;
   height: 3rem;
@@ -115,4 +137,52 @@ h2.header-banner-text {
   color: var(--white, white);
   width: 100%;
   text-align: center;
+  margin: 1rem;
+}
+
+/* Footer Styles */
+footer {
+  box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: var(--footer-height, 150px);
+}
+div.footer {
+  background-color: var(--dark-primary, gray);
+  width: 100%;
+  height: 100%;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+h1.footer,
+h2.footer,
+h3.footer,
+p.footer {
+  font-family: var(--font-family-content, sans-serif);
+  color: var(--white, white);
+}
+
+/* MEDIA QUERIES */
+/* For mobile devices */
+@media (max-width: 768px) {
+  nav {
+    margin-bottom: 6rem; /* This is important, as the mobile version of the navigation bar takes up more space and would cover the top of the page's content. This change adds more space to the margin that pushes the content further down to avoid overlap. */
+  }
+  .header-navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--red-secondary);
+  }
+  .header-navbar-pagelink {
+    box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.3);
+  }
+  main {
+    margin: 0px; /* removes the margin, allowing the site to fill the mobile screen's width */
+    padding: 1.5rem;
+  }
 }
