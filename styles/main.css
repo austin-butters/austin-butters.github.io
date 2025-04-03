@@ -28,7 +28,7 @@
   --font-size-h1: 2.5rem;
   --font-size-h2: 1.75rem;
   --font-size-h3: 1.5rem;
-  --font-size-p: 1rem;
+  --font-size-p: 1.15rem;
   /* Font sizes for different text elements */
 
   /* Layout variables */
@@ -109,8 +109,6 @@ nav {
   padding-top: 40px;
   padding-bottom: 15px;
   margin: 0px;
-}
-h1.header-banner-text {
 }
 h2.header-banner-text {
   font-size: 1rem;
