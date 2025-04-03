@@ -84,6 +84,7 @@ p {
 main {
   margin-left: 20vh; /* This wil be removed in a media query (below) for mobile, as mobile devices are narrower. */
   margin-right: 20vh;
+  padding-top: 2rem;
   min-height: calc(100vh - var(--footer-height, 100px));
 }
 
