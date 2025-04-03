@@ -34,7 +34,7 @@
   /* To add: border, radius, opacity, shadow variables, etc*/
 }
 
-/* BASIC ELEMENT STYLING - The website's default's if not otherwise defined by classes and IDs */
+/* BASIC ELEMENT STYLING - The website's default's if not otherwise defined by classes, IDs and media queries */
 /* This fixes the browser adding a white border of padding or margin by default */
 html,
 body,
@@ -44,6 +44,10 @@ main,
 footer {
   margin: 0px;
   padding: 0px;
+}
+
+body {
+  background-color: var(--light-primary, white);
 }
 
 /* Basic text styling */
@@ -66,6 +70,12 @@ p {
   font-family: var(--font-family-content, sans-serif);
   font-size: var(--font-size-p, 1rem);
   color: var(--black, black);
+}
+
+/* Layout Styling - Basic layout styling for the main content of the page. */
+main {
+  background-color: var(--light-primary, white);
+  margin: 50px; /*This wil be removed in a media query (below) for mobile, as mobile devices are narrower. */
 }
 
 /*CLASSES*/
@@ -162,5 +172,8 @@ p.footer {
   }
   .header-navbar-pagelink {
     box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.3);
+  }
+  main {
+    margin: 0px; /* removes the margin, allowing the site to fill the mobile screen's width */
   }
 }
