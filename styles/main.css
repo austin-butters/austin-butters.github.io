@@ -193,3 +193,30 @@ p.footer {
     padding: 1.5rem;
   }
 }
+
+/* BLOG PAGE SPECIFIC */
+.blog-post-preview {
+  width: 100%;
+  height: 100%;
+}
+
+/* IDs, for specific elements */
+#blog-post-grid {
+  width: 100%;
+  display: grid;
+  row-gap: 10px;
+  column-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+}
+/* Media Query changes grid layout */
+@media (max-width: 1024px) {
+  #blog-post-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  #blog-post-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
