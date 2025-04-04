@@ -72,7 +72,7 @@ h2 {
 h3 {
   font-family: var(--font-family-headings, sans-serif);
   font-size: var(--font-size-h3, 1.5rem);
-  color: var(--red-secondary, black);
+  color: var(--black, black);
 }
 p {
   font-family: var(--font-family-content, sans-serif);
@@ -84,8 +84,11 @@ p {
 
 /* Layout Styling - Basic layout styling for the main content of the page. */
 main {
-  margin-left: 20vh; /* This wil be removed in a media query (below) for mobile, as mobile devices are narrower. */
-  margin-right: 20vh;
+  margin-left: 10vw; /* This wil be removed in a media query (below) for mobile, as mobile devices are narrower. */
+  margin-right: 10vw;
+  margin-bottom: 5rem;
+  padding-left: 3vw;
+  padding-right: 3vw;
   padding-top: 2rem;
   min-height: calc(100vh - var(--footer-height, 100px));
 }
@@ -252,4 +255,10 @@ p.footer {
   .gallery {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+/* BLOG POST SPECIFIC */
+#post-page {
+  background-color: var(--light-secondary, white);
+  border-radius: 1rem;
 }
