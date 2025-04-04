@@ -78,6 +78,8 @@ p {
   font-family: var(--font-family-content, sans-serif);
   font-size: var(--font-size-p, 1rem);
   color: var(--black, black);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Layout Styling - Basic layout styling for the main content of the page. */
@@ -218,6 +220,36 @@ p.footer {
 }
 @media (max-width: 768px) {
   #blog-post-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* ABOUT PAGE SPECIFIC */
+.gallery {
+  width: 100%;
+  display: grid;
+  row-gap: 20px;
+  column-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 5rem;
+}
+.gallery-image-container {
+  width: 100%;
+  height: 100%;
+}
+.gallery-image {
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+}
+/* Media Query changes grid layout for different screen sizes */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .gallery {
     grid-template-columns: repeat(1, 1fr);
   }
 }
