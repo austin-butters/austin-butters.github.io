@@ -210,7 +210,7 @@ p.footer {
   grid-auto-rows: 200px;
   margin-bottom: 5rem;
 }
-/* Media Query changes grid layout */
+/* Media Query changes grid layout for different screen sizes */
 @media (max-width: 1024px) {
   #blog-post-grid {
     grid-template-columns: repeat(2, 1fr);
