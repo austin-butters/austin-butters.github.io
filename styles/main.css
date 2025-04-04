@@ -78,6 +78,8 @@ p {
   font-family: var(--font-family-content, sans-serif);
   font-size: var(--font-size-p, 1rem);
   color: var(--black, black);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Layout Styling - Basic layout styling for the main content of the page. */
