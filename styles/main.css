@@ -68,6 +68,7 @@ h2 {
   font-family: var(--font-family-headings, sans-serif);
   font-size: var(--font-size-h2, 1.875em);
   color: var(--red-secondary, black);
+  margin-top: 6rem;
 }
 h3 {
   font-family: var(--font-family-headings, sans-serif);
