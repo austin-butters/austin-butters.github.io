@@ -204,6 +204,23 @@ p.footer {
   width: 100%;
   height: 100%;
 }
+/* Styling of preview text */
+.blog-post-preview-info {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+a.blog-post-preview-info {
+  text-decoration: none;
+  color: var(--red-secondary, black);
+}
+p.blog-post-preview-info {
+  font-size: 0.8rem;
+}
+p.preview-date {
+  font-weight: 700; /* make date bold */
+  font-size: 1rem;
+}
 
 /* IDs, for specific elements */
 #blog-post-grid {
@@ -215,6 +232,7 @@ p.footer {
   grid-auto-rows: 200px;
   margin-bottom: 5rem;
 }
+
 /* Media Query changes grid layout for different screen sizes */
 @media (max-width: 1024px) {
   #blog-post-grid {
