@@ -283,3 +283,22 @@ p.preview-date {
   background-color: var(--light-secondary, white);
   border-radius: 1rem;
 }
+
+/* MEETING CRITERIA (the one thing I haven't done is use the position: property, I have positioned elements I just did it in different ways> */
+.position-demonstration {
+  width: 400px;
+  height: 400px;
+  border: purple;
+  border-width: 10px;
+  border-style: solid;
+}
+#position-elements {
+  width: 100px;
+  height: 100px;
+  border: purple;
+  border-width: 10px;
+  border-style: solid;
+  position: absolute;
+  bottom: -40%;
+  left: 000px;
+}
