@@ -1,0 +1,15 @@
+.in-post-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+#positioning-summary-table {
+  width: 100%;
+  font-family: var(--font-family-content, sans-serif);
+}
+.table-headings {
+  font-weight: 700;
+}
+.monospace-text {
+  font-family: monospace;
+}
