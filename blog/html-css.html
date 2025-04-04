@@ -30,9 +30,64 @@
     </header>
     <!--"Main" element. Insert content of the page here.-->
     <main id="post-page"><!--Main content, id "post-page" for the <main> element on a blog post.-->
-        <h1>INSERT POST TITLE HERE</h1>
-        <h3>INSERT DATE HERE, DD MONTH, YEAR</h3>
-        <p>INSERT CONTENT HERE</p>
+        <h1>Sprint 2 Technical Blog - CSS Positioning</h1>
+        <h3>04 April, 2025</h3>
+        <p>For my sprint 2 technical blog post, I've chosen to write about CSS positioning.</p>
+        <p>CSS properties are used to alter the way elements in an HTML document appear in a browser. 
+          The “position” property specifies an element’s position. Every HTML document has a natural flow 
+          (document flow) of elements, i.e the natural order and positioning of elements. By adding 
+          position properties to elements with CSS, we can change where the elements appear on a page.
+        </p>
+        <p>In this post, I’ll be looking at the difference between four positioning styles:</p>
+        <ol>
+          <li>Static</li>
+          <li>Relative</li>
+          <li>Absolute</li>
+          <li>Fixed</li>
+        </ol>
+        <p>Along with these positioning styles, there are four more properties that can be used to further specify an element’s position. They are:</p>
+        <ol>
+          <li>top</li>
+          <li>right</li>
+          <li>bottom</li>
+          <li>left</li>
+        </ol>
+        <div id="static-positioning-info">
+          <h2>Static Positioning</h2>
+          <p>When an element’s position is unspecified, it has static positioning by default. To specify static positioning, use:</p>
+          <img src="../assets/images/0000-placeholder-black.jpeg" alt="alt-text-placeholder">
+          <p>An element with a static position will be positioned in its normal place in the document flow. 
+            Specifying this style may seem unnecessary, but can be useful if you want to avoid other CSS styles affecting an element’s position.</p>
+          <p>Note: The “Top, Right, Bottom, Left” properties have no effect on an element with static positioning.</p>
+        </div>
+        <div id="relative-positioning-info">
+          <h2>Relative Positioning</h2>
+          <p>An element with relative positioning is positioned relative to its default (static) position. To set an element’s position to relative, use:</p>
+          <img src="../assets/images/0000-placeholder-black.jpeg" alt="alt-text-placeholder">
+          <p>We can use the top, right, bottom, left specifiers to position the element.</p>
+          <img src="../assets/images/0000-placeholder-black.jpeg" alt="alt-text-placeholder">
+          <p>These properties can be confusing, because “left” moves an element to the right, “top” movies an element down, and so on. The best way to understand this is to imagine a reference frame where the element would normally be. Moving an element with “left: 20px;” adjusts its position so that its left edge is 20px to the right of where it would normally be. Using “right: 20px;” would do the inverse, so that the element’s right edge is now 20px to the left of where it would normally be.</p>
+          <p>Giving an element relative position does not take it out of the document flow. All other elements on the page will behave as if it’s still in its original position.</p>
+        </div>
+        <div id="absolute-positioning-info">
+          <h2>Absolute Positioning</h2>
+          <p>In HTML, elements are often nested within each other, and these are often referred to as parent-child relationships. By setting an element’s position to absolute, it is positioned relative to its nearest ancestor with specified positioning. An element can’t be set to have absolute positioning relative to a parent with static or unspecified positioning. If no ancestors with relative, absolute or fixed positioning exist, the element will be positioned relative to the html element, which generally means it’s positioned relative to the viewport.</p>
+          <p>To set an element’s positioning to absolute, use:</p>
+          <img src="../assets/images/0000-placeholder-black.jpeg" alt="alt-text-placeholder">
+          <p>We can use the top, right, bottom, left properties the same way as we do for an element with relative positioning.</p>
+          <p>Giving an element absolute positioning will take it out of the document flow, and other elements will behave as if it’s not there.</p>
+        </div>
+        <div id="fixed-positioning-info">
+          <h2>Fixed Positioning</h2>
+          <p>We set an element’s positioning to fixed like this:</p>
+          <img src="../assets/images/0000-placeholder-black.jpeg" alt="alt-text-placeholder">
+          <p>This set’s the element’s position relative to the viewport, meaning it always stays in the same position. It doesn’t scroll with the rest of the webpage. The element is taken out of the document flow, meaning other elements will position themselves as if it’s not there.</p>
+          <p>To make an element with fixed positioning responsive to screen size, we can use units like vh and vw, instead of pixels. This means we can make sure an element always stays in the middle of the screen, e.g. a popup add.</p>
+        </div>
+        <div id="summary-info">
+          <h2>Summary</h2>
+          <!--Add Summary table here-->
+        </div>
         <h3 style="text-align: right;"><a href="../pages/page-blog.html">Return to blog post list</a></h3>
     </main>
     <!--"Footer" element. Insert footer information here.-->
