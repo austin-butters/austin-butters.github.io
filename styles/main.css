@@ -239,6 +239,8 @@ p.footer {
 }
 .gallery-image {
   border-radius: 1rem;
+  width: 100%;
+  height: auto;
 }
 /* Media Query changes grid layout for different screen sizes */
 @media (max-width: 1024px) {
