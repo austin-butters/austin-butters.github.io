@@ -81,6 +81,9 @@ p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+img {
+  box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.3);
+}
 
 /* Layout Styling - Basic layout styling for the main content of the page. */
 main {
