@@ -225,21 +225,20 @@ p.footer {
 }
 
 /* ABOUT PAGE SPECIFIC */
-.gallery-image {
-  width: 100%;
-  height: 100%;
-  border-radius: 1rem;
-}
-
-/* IDs, for specific elements */
 .gallery {
   width: 100%;
   display: grid;
   row-gap: 20px;
   column-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 200px;
   margin-bottom: 5rem;
+}
+.gallery-image-container {
+  width: 100%;
+  height: 100%;
+}
+.gallery-image {
+  border-radius: 1rem;
 }
 /* Media Query changes grid layout for different screen sizes */
 @media (max-width: 1024px) {
