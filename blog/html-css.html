@@ -86,6 +86,38 @@
         </div>
         <div id="summary-info">
           <h2>Summary</h2>
+          <table id="positioning-summary-table">
+            <tr class="table-headings">
+              <td></td>
+              <td>Position Relative to</td>
+              <td>Stays in Document Flow? </td>
+              <td>Scrolls with Page</td>
+            </tr>
+            <tr>
+              <td class="monospace-text">static</td>
+              <td>N/A</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td class="monospace-text">relative</td>
+              <td>Original position</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td class="monospace-text">absolute</td>
+              <td>Nearest non-static ancestor</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td class="monospace-text">fixed</td>
+              <td>Browser viewpoint</td>
+              <td>No</td>
+              <td>No</td>
+            </tr>
+          </table>
           <!--Add Summary table here-->
         </div>
         <h3 style="text-align: right;"><a href="../pages/page-blog.html">Return to blog post list</a></h3>
