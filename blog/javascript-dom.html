@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>S3 JavaScript DOM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <link href="../styles/main.css" rel="stylesheet" />
+    <link href="../styles/s2-technical-blog.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--"Header element. Insert header information here."-->
+    <header class="header">
+      <!--Top Banner-->
+      <div class="header header-banner">
+        <h1 class="header header-banner header-banner-text">AUSTIN BUTTERS</h1>
+        <h2 class="header header-banner header-banner-text">
+          (The one and only.) My blog.
+        </h2>
+      </div>
+      <!--"Nav" (navigation) element. Insert navigation information here-->
+      <nav class="header header-navbar shadow-object">
+        <!--Navigation Bar-->
+        <div class="header header-navbar header-navbar-pagelink">
+          <a
+            class="header header-navbar header-navbar-pagelink header-navbar-pagelink-link"
+            href="../index.html"
+            >HOME</a
+          >
+        </div>
+        <div class="header header-navbar header-navbar-pagelink">
+          <a
+            class="header header-navbar header-navbar-pagelink header-navbar-pagelink-link"
+            href="../pages/page-blog.html"
+            >BLOG</a
+          >
+        </div>
+        <div class="header header-navbar header-navbar-pagelink">
+          <a
+            class="header header-navbar header-navbar-pagelink header-navbar-pagelink-link"
+            href="../pages/page-about.html"
+            >ABOUT</a
+          >
+        </div>
+      </nav>
+    </header>
+    <!--"Main" element. Insert content of the page here.-->
+    <main id="post-page">
+      <!--Main content, id "post-page" for the <main> element on a blog post.-->
+      <h1>Sprint 3 Technical - JavaScript Fundimentals - DOM</h1>
+      <h3>12 April, 2025</h3>
+      <p>
+        In Sprint 3, I learnt some of the basics of JavaScript and how to use it
+        to interact with HTML and CSS. Here's some of the things I learnt:
+      </p>
+      <h2>
+        An analogy to describe JavaScript and its relationship to HTML and CSS.
+      </h2>
+      <p>
+        If we compare creating a website to building a house, HTML acts as the
+        structure. It includes the foundation, the framing, and things like
+        windows and doors. CSS is everything aesthetic, including the paint,
+        curtains, the interior design, and the trimmings like skirting boards
+        and windowsills. Finally, JavaScript is the plumbing and electricity. It
+        flows through the house’s walls unseen, and adds interactivity and
+        functionality. It makes the lights turn on when you flick a switch,
+        makes the water flow, etc.
+      </p>
+      <div class="gallery">
+        <div class="gallery-image-container">
+          <img
+            class="gallery-image"
+            src="../assets/images/0010-house-frame.png"
+            alt="House frame - HTML analogy"
+          />
+        </div>
+        <div class="gallery-image-container">
+          <img
+            class="gallery-image"
+            src="../assets/images/0011-house-painting.jpg"
+            alt="House painting - CSS analogy"
+          />
+        </div>
+        <div class="gallery-image-container">
+          <img
+            class="gallery-image"
+            src="../assets/images/0012-house-wiring.png"
+            alt="House wiring - JS analogy"
+          />
+        </div>
+      </div>
+      <p>
+        To summarize, HTML says what’s there, CSS says how it looks, and
+        JavaScript says how it behaves.
+      </p>
+      <h2>
+        Explain control flow and loops using an example process from everyday
+        life, for example, 'waking up' or 'brushing your teeth' (but not those).
+      </h2>
+      <h2>
+        Describe what the DOM is and an example of how you might interact with
+        it.
+      </h2>
+      <p>
+        DOM is short for “Data Object Model”. The DOM is a model that represents
+        HTML documents as nested objects. It can be visualized as a tree, where
+        the root is the <code>html</code> element, branches are elements like
+        <code>header</code>, <code>body</code>, and the leaves are elements like
+        <code>&lt;p&gt;</code> tags, images, etcetera. By nesting elements in this way,
+        each element has a position in the DOM that we can use to “do stuff”.
+      </p>
+      <img
+            class="in-post-image"
+            src="../assets/images/0013-the-dom.jpg"
+            alt="The DOM - Data Object Model"
+          />
+      <p>
+        HTML might seem like an unnecessarily complicated language. It divides
+        documents into elements with classes, IDs, and many different
+        properties. Why don’t we just upload PDFs or images of what we want the
+        site to look like? There’s a few reasons for this, but one major reason
+        becomes obvious when we introduce JavaScript. HTML is an abstraction of
+        the way a document looks, which makes it easy for JS to interact with.
+        By dividing documents into elements and organizing them with classes,
+        IDs, <code>&lt;div&gt;</code>s, etc, we make it easy for JS to interact with the
+        HTML document’s content.
+      </p>
+      <p>
+        We can access and manipulate specific elements and their properties in
+        many ways. For example, let’s assume we have this HTML element:
+      </p>
+      <pre><code> &lt;h1 class=“redTitle” id=“greeting”&gt;Hello!&lt;h1&gt;</h1></code></pre>
+      <p>We can interact with this in a number of ways. First, we have to “grab a hold of” the element, so that the JavaScript knows what element it’s manipulating. We can do this in a few ways:</p>
+      <img
+            class="in-post-image"
+            src="../assets/images/0016-code-grabbing-elements.png"
+            alt="Different ways of grabbing elements in JavaScript"
+          />
+      <p>
+      <h3><code>.getElementbyId()</code></h3>
+      <p>Grabs an element with the id <code>greeting</code>. It returns a single element, as every HTML document should only have one element with any ID.</p>
+      <h3><code>.querySelector()</code></h3>
+      <p>Returns an element based on a CSS selector. This can be:</p>
+      <ol>
+        <li>A tag: <code>h1</code></li>
+        <li>A class: <code>.redTitle</code></li>
+        <li>An ID: <code>#greeting</code></li>
+      </ol>
+      <p>The querySelector method will only return the first matching element in the HTML document. To return all elements, we would use the method <code>.querySelectorAll()</code></p>
+      <h3><code>.getElementsByClassName()</code></h3>
+      <p>Returns all elements with a matching class name. These elements will be returned in a type of JavaScript object known as a NodeList.</p>
+      <h3><code>.GetElementsByTagName()</code></h3>
+      <p>Returns all elements with a matching tag (in this example, all h1 elements) in a Node List</p>
+      <!--Add Description of what we can do with these elements-->
+      <!--Add description of how to interact with DOM through DevTools-->
+      <!--Add popup add example-->
+      <h2>
+        Explain the difference between accessing data from arrays and objects.
+      </h2>
+      <p>There are many types of data in JavaScript. Values are usually stored as numbers, strings, or booleans. We can also use arrays and objects to store groups of values.</p>
+      <p>An array stores information in a list, separated by commas. For example:</p>
+      <code>let names = [“Alice”, “Bob”, “Charlie”]</code>
+      <code>// This is an array.</code>
+      <p>An object stores data in key-value pairs:</p>
+      <pre><code>
+        let names = {
+          name1: "Alice",
+          name2: "Bob",
+          name3: "Charlie"
+        }; // this is an object
+      </code></pre>
+      <p>Arrays and objects are both infinitely nestable. This means a value in an array or object can be another array or object itself. This is very useful, although deep nesting can cause performance issues in more complicated situations. Here’s an example of a nested object:</p>
+      <img
+            class="in-post-image"
+            src="../assets/images/0017-code-nested-objects.png"
+            alt="Nested objects and arrays in JavaScript"
+          />
+      <p>In this example, we have an object called “people”. Within that object we have nested objects called “person1”, “person2”, “person3” for individual people. Objects allow us to store much more complicated information than arrays, as each value has a key to identify it. For example, we can see Alice’s height, Bob’s age, and Charlie’s cafe order. Notice that we have an “order” array nested within the object as one of the values.</p>
+      <!--Explain how to access the data in arrays and objects-->
+      <h2>Explain what functions are and why they are helpful.</h2>
+      <p>Often, we have code we want to repeat. Take this example:</p>
+      <img
+            class="in-post-image"
+            src="../assets/images/0014-code-js-without-functions.png"
+            alt="Inefficient code without functions"
+          />
+      <p>
+      <p>This code is inefficient. It repeats the same process three times, and if we wanted to modify the process we’d have to modify each occurrence of it. In complex situations processes may be repeated hundreds or thousands of times, and modifying every instance becomes extremely difficult. By creating a function, we can improve out code: </p>
+      <img
+            class="in-post-image"
+            src="../assets/images/0015-code-js-with-functions.png"
+            alt="Efficient code with functions"
+          />
+      <p>
+      <p>If we wanted to modify this process now, we’d only have to do it once.</p>
+      <p>To create a Javascript function, we first have to declare it. We can use parameters like “name”, which allow us to call the function with different values each time.</p>
+      <img src="../assets/images/0009-code-js-function-example.png" alt="Example of JS function" class="in-post-image">
+      <p>
+        After this, we can call it with an argument “Alice”. This function will run, using the value “Alice” in place of its “name” parameter.</p>
+      <h3 style="text-align: right">
+        <a href="../pages/page-blog.html">Return to blog post list</a>
+      </h3>
+    </main>
+    <!--"Footer" element. Insert footer information here.-->
+    <footer class="footer">
+      <div class="footer">
+        <p class="footer">
+          Footer information will be added once site is more complete.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
