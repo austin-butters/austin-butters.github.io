@@ -46,7 +46,7 @@
     <!--"Main" element. Insert content of the page here.-->
     <main id="post-page">
       <!--Main content, id "post-page" for the <main> element on a blog post.-->
-      <h1>Sprint 3 Technical - JavaScript Fundimentals - DOM</h1>
+      <h1 id="title">Sprint 3 Technical - JavaScript Fundimentals - DOM</h1><!--ID needed for this post for JS-->
       <h3>12 April, 2025</h3>
       <p>
         In Sprint 3, I learnt some of the basics of JavaScript and how to use it
@@ -96,6 +96,33 @@
         Explain control flow and loops using an example process from everyday
         life, for example, 'waking up' or 'brushing your teeth' (but not those).
       </h2>
+      <p>Put simply, control flow in JavaScript is the order in which the code runs. Controlling this order is a very important part of programming. By default, the code runs from top to bottom, one line after another. Control flow lets us change this order using certain structures that allow programs to think, make decisions, and perform tasks based on those decisions.</p>
+      <p>There are many ways to do this, including conditionals (e.g. do something only if a certain condition is true), loops (e.g. repeat this task ten times), functions (perform a list of tasks when a function is called before continuing with the rest of the code), and more.</p>
+      <p>Essentially, the computer is thinking about different variables, and making performing specific tasks in a specific order based on those variables. Here’s an example of what that might look like in everyday life when doing laundry:</p>
+      <ol>
+        <li>Check if there are dirty clothes.</li>
+        <li>If there are no dirty clothes, do not do laundry.</li>
+        <li>If there are dirty clothes:
+          <ol>
+            <li>Sort the clothes into whites, darks, colours.</li>
+            <li>Repeat for each sorted pile of clothes:
+              <ol>
+                <li>Put clothes into washing machine</li>
+                <li>Add detergent</li>
+                <li>Turn on machine</li>
+                <li>Wait until wash is complete</li>
+                <li>Take clothes out of machine</li>
+                <li>Dry clothes</li>
+                <li>Fold clothes</li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ol>
+      <p>This is a very simple example, and it's something we all do in our day-to-day life without thinking to hard. But it's extremely important to perform tasks in the right order when working with JavaScript. The computer doesn't naturally know what order it should perform tasks in, so we have to define it very specifically with control flow. One mistake, and your white clothes could all be pink.</p>
+      <p>This example uses both conditionals and loops. The conditional aspect makes sure we only wash clothes if they are dirty, and the looping element is used to wash each pile of clothes.</p>
+      
+      
       <h2>
         Describe what the DOM is and an example of how you might interact with
         it.
@@ -149,10 +176,23 @@
       <h3><code>.getElementsByClassName()</code></h3>
       <p>Returns all elements with a matching class name. These elements will be returned in a type of JavaScript object known as a NodeList.</p>
       <h3><code>.GetElementsByTagName()</code></h3>
-      <p>Returns all elements with a matching tag (in this example, all h1 elements) in a Node List</p>
+      <p>Returns all elements with a matching tag (in this example, all <code>h1</code> elements) in a NodeList</p>
       <!--Add Description of what we can do with these elements-->
       <!--Add description of how to interact with DOM through DevTools-->
       <!--Add popup add example-->
+      <p>So, now that we have an element, what can we do with it? The answer is almost anything. </p>
+      <p>If we <code>console.log()</code> the element, we can see it in the DevTools console. This is very useful for programming because it allows us to see what’s going on behind the scenes.</p>
+      <img
+            class="in-post-image"
+            src="../assets/images/0018-devtools-console-log.png"
+            alt="DevTools console log"
+          />
+      <p>We can also manipulate the element in many different ways, using its properties. For example, the property <code>.innerHTML</code> defines the text between an element’s opening and closing tags. If we have a button, we can modify it’s text:</p>
+      <button id="clickMe">Click Me!</button>
+      <p>These are just two examples of what we can do, but the possibilities are endless.</p>
+
+
+
       <h2>
         Explain the difference between accessing data from arrays and objects.
       </h2>
@@ -176,6 +216,27 @@
           />
       <p>In this example, we have an object called “people”. Within that object we have nested objects called “person1”, “person2”, “person3” for individual people. Objects allow us to store much more complicated information than arrays, as each value has a key to identify it. For example, we can see Alice’s height, Bob’s age, and Charlie’s cafe order. Notice that we have an “order” array nested within the object as one of the values.</p>
       <!--Explain how to access the data in arrays and objects-->
+      <p>So, how to we access data in an array or object?</p>
+      <p>In an array, each item has an index position. We can use that position to locate any value in an array. For example:</p>
+      <code>let names = ["Alice”, “Bob”, “Charlie”]</code><br>
+      <code>console.log(names[2])</code>
+      <p>Will log the item in index position 2. The console will log <code>Charlie</code>. Confusing right? In JavaScript, we count from zero. This means that an array of length three (i.e has three items) will have values in position 0, 1 and 2. If we tried to get a value for <code>names[2]</code>, we’d simply get <code>undefined</code>. This can be confusing because you have to learn to think differently. It’s also important to know that while we index from zero, number values and arithmetic still work the same as normal, e.g. <code>console.log(5 + 5)</code> would still return a <code>10</code>.</p>
+      <p>In an object, items don’t have a specific order, so we can’t simply get the first item in the object. If we return to our previous example:</p>
+      <pre><code>
+        let names = {
+          name1: "Alice",
+          name2: "Bob",
+          name3: "Charlie"
+        };
+      </code></pre>
+      <p>We can use the key to find a value. The keys in this object are name1, name2 and name3. To find the value for one of these keys, we can use</p>
+      <code>console.log(names.name1)</code>
+      <p>Will log <code>Alice</code>.</p>
+      <p>What if we want a variable to define the name of the key we’re looking for? Here’s how we’d do it:</p>
+      <code>let nameToFind = "name2"</code><br>
+      <code>console.log(names[nameToFind])</code>
+      <p>Note that we use square bracket notation here instead of simply separating with a dot. This is because we’re using a variable. If we just used a dot, we’d be trying to look for a key that was literally named “nameToFind”, which doesn’t exit. By using square brackets, we tell the script to look for a key with the value of that variable.</p>
+      <p>Once we’ve accessed these values from within arrays and objects, there’s no limit to how we can use them.</p>
       <h2>Explain what functions are and why they are helpful.</h2>
       <p>Often, we have code we want to repeat. Take this example:</p>
       <img
